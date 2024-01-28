@@ -37,5 +37,6 @@ images.forEach((image) => {
   newLi.append(newImg);
   newLi.style.listStyle = 'none'; 
   newImg.style.width = '360px'
+  newImg.style.height= '300px'
 })
 
