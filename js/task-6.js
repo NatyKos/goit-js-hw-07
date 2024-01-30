@@ -15,7 +15,7 @@ btnCreate.addEventListener('click', () => {
   })
 
 function createBoxes(amount) {
-  destroyBoxes();
+  boxes.innerHTML = '';
   if (amount >= 1 && amount <= 100) {
     let size = 30;
     for (let index = 1; index <= amount; index++) {

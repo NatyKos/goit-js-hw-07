@@ -6,12 +6,13 @@ function formHandler(event) {
     const password = form.elements.password.value;
     if (email.trim() === '' || password.trim() === '') {
         alert('All form fields must be filled in');
-    }
-    const data = {
-        email: email.trim(),
-        password: password.trim(),
+    } else {
+        const data = {
+            email: email.trim(),
+            password: password.trim(),
         };
-    console.log(data);
+        console.log(data);
+    }
     form.reset();
 }
  

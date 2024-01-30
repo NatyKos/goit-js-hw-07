@@ -1,9 +1,9 @@
 const username = document.getElementById('name-input');
+const text = document.getElementById('name-output');
 function inputHandler(event) {
-    const text = document.getElementById('name-output');
     if (event.target.value.trim() !== '') {
     text.textContent = event.target.value.trim();
-   } else {
+    } else {
     text.textContent = 'Anonymous';
    }
 }

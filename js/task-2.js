@@ -28,15 +28,26 @@ const images = [
   },
 ];
 const gallery = document.querySelector('.gallery');
-images.forEach((image) => {
-  const newLi = document.createElement('li');
-  gallery.append(newLi);
-  const newImg = document.createElement('img');
-  newImg.setAttribute('src', image.url);
-  newImg.setAttribute('alt', image.alt);
-  newLi.append(newImg);
-  newLi.style.listStyle = 'none'; 
-  newImg.style.width = '360px'
-  newImg.style.height= '300px'
-})
 
+function createGallery(url, alt) {
+  const newLi = `<li><img src = '${url}' alt = "${alt}"></li>`;
+  return newLi;
+}
+let newLi = '';
+for (let image of images) {
+  newLi += createGallery(image.url, image.alt);  
+}
+gallery.innerHTML = newLi;
+
+// неефективний метод:
+// images.forEach((image) => {
+//   const newLi = document.createElement('li');
+//   gallery.append(newLi);
+//   const newImg = document.createElement('img');
+//   newImg.setAttribute('src', image.url);
+//   newImg.setAttribute('alt', image.alt);
+//   newLi.append(newImg);
+//   newLi.style.listStyle = 'none'; 
+//   newImg.style.width = '360px'
+//   newImg.style.height= '300px'
+// })

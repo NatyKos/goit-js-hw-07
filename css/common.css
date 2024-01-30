@@ -66,6 +66,13 @@ ul {
   column-gap: 24px;
   background-color: #ffffff;
 }
+.gallery img {
+  width: 360px;
+  height: 300px;
+}
+.gallery li {
+  list-style-type: none;
+}
 /* task-3 */
 
 #name-input {
