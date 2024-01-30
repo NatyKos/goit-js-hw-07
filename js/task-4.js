@@ -12,7 +12,7 @@ function formHandler(event) {
             password: password.trim(),
         };
         console.log(data);
-       form.reset();
+        form.reset();
     } 
   
 }
