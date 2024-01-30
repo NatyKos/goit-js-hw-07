@@ -33,11 +33,11 @@ function createGallery(url, alt) {
   const newLi = `<li><img src = '${url}' alt = "${alt}"></li>`;
   return newLi;
 }
-let newLi = '';
+let newList = '';
 for (let image of images) {
-  newLi += createGallery(image.url, image.alt);  
+  newList += createGallery(image.url, image.alt);  
 }
-gallery.innerHTML = newLi;
+gallery.innerHTML = newList;
 
 // неефективний метод:
 // images.forEach((image) => {
